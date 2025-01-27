@@ -1,0 +1,35 @@
+.gradient-background {
+    background: linear-gradient(300deg, #000B58, #003161, #006A67);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.bi-cloud-moon-fill {
+    margin-right: 7px;
+}
+
+.card-heading {
+    align-self: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+.city-name {
+    font-size: 30pt;
+}
+
+.card-text {
+    font-size: 40pt;
+    text-shadow: 2px 2px 2px black;
+}
