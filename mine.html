@@ -18,7 +18,7 @@
 <body class="gradient-background">
 
     <!------------Header---------------->
-    <div class="container">
+    <div class="container weather-header text-center">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom border-white border-2">
           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cloud-moon-fill" viewBox="0 0 16 16">
@@ -39,36 +39,49 @@
       </div>
 
     <!------------Main Content---------------->
-    <div class="container px-4 py-5" id="custom-cards">
-        <h2 class="pb-2 text-center city-name">Meerut, Uttar Pradesh</h2>
+    <div class="container px-4 py-5 weather-body" id="custom-cards">
+
+      
+              <form id="search-form" class="form-inline justify-content-center">
+                <input type="search" id="search" class="form-control mr-sm-2" placeholder="Enter city name">
+                <button type="submit" class="btn btn-light align-items-center">Search</button>
+              </form>
+
+        <h2 class="pb-2 pt-4 text-center city-name">Meerut, Uttar Pradesh</h2>
     
         <!------Temperature Card------>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 border-0">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 border-0 weather-card">
           <div class="col ">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg border-0" style="background-image: url('./Images/sunny.jpeg');">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg border-0 weather-image" id="weather-image" style="background-image: url('./Images/sunny.jpeg');">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                 <h2 class="text-center fw-bold py-2 lh-1 card-text">15°</h2>
                 <h3 class="pt-3 mt-3 mb-4 display-6 lh-1 fw-bold  card-heading">Temperature</h3>
+                <p id="temperature">N/A</p>
+                <span id="temperature-loading" class="loading-indicator">Loading...</span>
               </div>
             </div>
           </div>
           
           <!------Humidity Card------>
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg border-0" style="background-image: url('./Images/cloudy.jpg');">
+          <div class="col weather-card">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg border-0 weather-image" style="background-image: url('./Images/cloudy.jpg');">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                 <h2 class="text-center fw-bold py-2 lh-1 card-text">70%</h2>
                 <h3 class="pt-3 mt-3 mb-4 display-6 lh-1 fw-bold  card-heading">Humidity</h3>
+                <p id="humidity">N/A</p>
+                <span id="humidity-loading" class="loading-indicator">Loading...</span>
               </div>
             </div>
           </div>
     
           <!------Wind Speed Card------>
-          <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg border-0" style="background-image: url('./Images/rainy.jpg');">
+          <div class="col weather-card">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg border-0 weather-image" style="background-image: url('./Images/rainy.jpg');">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                 <h2 class="text-center fw-bold py-2 lh-1 card-text">5 km/h</h2>
                 <h3 class="pt-3 mt-3 mb-4 display-6 lh-1 fw-bold card-heading">Wind Speed</h3>
+                <p id="wind-speed">N/A</p>
+                <span id="wind-speed-loading" class="loading-indicator">Loading...</span>
               </div>
             </div>
           </div>
